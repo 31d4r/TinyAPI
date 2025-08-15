@@ -102,7 +102,6 @@ struct CreateUserCall: APICall {
 ### 4. Execute Calls
 
 ```swift
-@MainActor
 class UserService {
     private let apiClient: APIClient
 
