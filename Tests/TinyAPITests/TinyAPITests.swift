@@ -9,7 +9,7 @@ class TinyAPITests: XCTestCase {
     func testGET() async {
         // Initialize API client with HTTPBin service
         let config = DefaultAPIConfiguration(baseURL: URL(string: "https://httpbin.org/")!)
-        let client = await APIClient(configuration: config)
+        let client = APIClient(configuration: config)
         
         // Create and execute GET request
         let call = TestGET()
@@ -29,7 +29,7 @@ class TinyAPITests: XCTestCase {
     func testPOST() async {
         // Initialize API client
         let config = DefaultAPIConfiguration(baseURL: URL(string: "https://httpbin.org/")!)
-        let client = await APIClient(configuration: config)
+        let client = APIClient(configuration: config)
         
         // Create and execute POST request
         let call = TestPOST()
@@ -49,7 +49,7 @@ class TinyAPITests: XCTestCase {
     func testUpload() async {
         // Initialize API client
         let config = DefaultAPIConfiguration(baseURL: URL(string: "https://httpbin.org/")!)
-        let client = await APIClient(configuration: config)
+        let client = APIClient(configuration: config)
         
         // Create and execute upload request
         let call = TestUpload()
